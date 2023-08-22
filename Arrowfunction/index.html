@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>print odd number in  arry</h1>
+
+    <script>
+    var arr=[1,2,3,4,5, 6, 7,8,9,10];
+    arr.forEach(num =>  {
+        if(num % 2 !==0){
+            console.log(num);
+
+        }
+    });
+    </script>
+    
+    <script>
+  
+
+//Convert all the strings to title caps in a string array
+var arr2 = ["hello", "world", "javascript"];
+var titleCaps = arr2.map(str => str.charAt(0).toUpperCase() + str.slice(1));
+console.log(titleCaps);
+
+//Sum of all numbers in an array
+var arrn = [1, 2, 3, 4];
+var sum = arrn.reduce((total, num) => total + num, 0);
+console.log(sum);
+
+//Return all the prime numbers in an array
+var arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var primeNums = arr3.filter(num => {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+});
+console.log(primeNums);
+
+//Return all the palindromes in an array
+var vi = ["hello", "world", "vishwa", "ananth"];
+var palindromes = vi.filter(str => {
+  var reversed = str.split("").reverse().join("");
+  return str === reversed;
+});
+console.log(palindromes);
+    </script>
+</body>
+</html>
